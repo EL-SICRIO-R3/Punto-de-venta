@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { HomeRoutingModule } from '../../modules/home/home-routing.module';
 import { PrimeNgModule } from '../../modules/shared/prime-ng/prime-ng.module';
+import { IMenu, itemsMenu } from '../../iterfaces/menu.interface';
+import { consumerPollProducersForChange } from '@angular/core/primitives/signals';
 
 @Component({
   selector: 'app-menu-layout',
@@ -15,26 +17,10 @@ import { PrimeNgModule } from '../../modules/shared/prime-ng/prime-ng.module';
 export class MenuLayoutComponent implements OnInit{
   
 
-  public menuOptions = [
-    { label: 'Nuevo Pedido', icon: 'pi pi-users',
-      item: [
-        {label: 'Para Comer Aqui', action: 'nuevo/comer-aqui'},
-        {label: 'Para Lleavar', action: 'nuevo/llevar'}
-      ],
-    },
-    { label: 'Registrar Platillo', icon: 'pi pi-users',
-      item: [
-        {label: 'Comida', action: 'registrar/comida'},
-        {label: 'Bebida', action: 'registrar/bebida'}
-      ],
-    },
-    { label: 'Registrar Empleado', action: 'registrar-empleado', icon: 'pi pi-users' },
-    { label: 'Reporte de movimientos', action: 'reporte', icon: 'pi pi-users' },
-    { label: 'Galeria', action: 'galeria', icon: 'pi pi-users' },
-  ];
+  public menuOptions: IMenu[] = itemsMenu
 
   constructor() {
-
+    this.menuOptions[0].active = true;
   }
 
 
@@ -42,4 +28,10 @@ export class MenuLayoutComponent implements OnInit{
 
   }
 
+  onSelectItem(item: IMenu){
+    this.menuOptions.forEach(element => {
+      element.active = false;
+    });
+    this.menuOptions.filter(x => x.label === item.label)[0].active = !item.active;
+  }
 }

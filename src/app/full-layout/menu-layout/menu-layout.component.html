@@ -1,11 +1,16 @@
-<div class="h-100 menu ms-2">
-    <div class="text-center mt-2">
+<div class="h-100 menu ms-2 p-3">
+    <div class="text-center mt-2 titleMenu">
         <h3>
             Birrieria El Kompare
         </h3>    
     </div>
 
     <div>
-        <p-panelMenu [model]="menuOptions" styleClass="w-full md:w-20rem" />
+        <div class="row align-items-center"  *ngFor="let item of menuOptions">
+            <i ngClass="{{item.icon}}" class="col-1"></i>
+            <div class="col-10 itemMenu" (click)="onSelectItem(item)" [ngClass]="{ 'active': item.active, '': !item.active }">
+                {{item.label}}
+            </div>
+        </div>
     </div>
 </div>

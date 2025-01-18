@@ -1,5 +1,25 @@
-@import "primeicons/primeicons.css";
+// Import Bootstrap source files
+@import './../node_modules/bootstrap/scss/bootstrap.scss' ;
+
+
+
+@import './../node_modules/primeng/resources/themes/nova/theme.css';
+@import './../node_modules/primeng/resources/primeng.min.css';
+@import './../node_modules/primeicons/primeicons.css';
+
+
 @import "_custom.scss";
 
-@import "primeng/resources/themes/lara-light-blue/theme.css";
-@import "primeng/resources/primeng.css";
+
+@layer tailwind-base, primeng, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer primeng; //not necessary I think
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
