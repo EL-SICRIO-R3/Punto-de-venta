@@ -1,2 +1,22 @@
 .lista_menu{
+    background-color: #ececec;
+    border-radius: 40px;
 }
+
+.title_lista_menu{
+    background-color: black;
+    color: white;
+    border-radius: 40px;
+    margin-top: 15px;
+    height: 30px;
+}
+
+.pedidosItem{
+    margin-top: 10px;
+}
+
+.pedidosItem>i{
+    font-size: 35px;
+}
+
+

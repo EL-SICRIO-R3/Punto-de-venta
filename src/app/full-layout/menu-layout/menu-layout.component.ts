@@ -34,6 +34,6 @@ export class MenuLayoutComponent implements OnInit{
       element.active = false;
     });
     this.menuOptions.filter(x => x.label === item.label)[0].active = !item.active;
-    this.router.navigate(['/home/nuevo-pedido']);
+    this.router.navigate(['/home/pedidos']);
   }
 }
