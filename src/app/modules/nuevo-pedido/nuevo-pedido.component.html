@@ -10,7 +10,11 @@
         </div>
 
         <div class="text-center mt-5">
-            <button type="button" class="btn btn-primary">Agregar pedido</button>
+            <button type="button" class="btn btn-primary" (click)="showDialog()">Agregar pedido</button>
         </div>
     </div>
 </div>
+
+<p-dialog header="Edit Profile" [modal]="true"  [style]="{ width: '25rem' }" [(visible)]="visible" >
+    
+</p-dialog>
