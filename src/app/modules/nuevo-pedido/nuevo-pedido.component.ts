@@ -3,9 +3,10 @@ import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { AgregarPedidoComponent } from './agregar-pedido/agregar-pedido.component';
 
 @Component({
-  selector: 'app-nuevo-pedido',
-  templateUrl: './nuevo-pedido.component.html',
-  styleUrl: './nuevo-pedido.component.css'
+    selector: 'app-nuevo-pedido',
+    templateUrl: './nuevo-pedido.component.html',
+    styleUrl: './nuevo-pedido.component.css',
+    standalone: false
 })
 export class NuevoPedidoComponent {
 

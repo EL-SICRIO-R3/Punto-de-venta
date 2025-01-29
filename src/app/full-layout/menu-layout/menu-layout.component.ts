@@ -7,13 +7,12 @@ import { consumerPollProducersForChange } from '@angular/core/primitives/signals
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-menu-layout',
-  standalone: true,
-  imports: [CommonModule,
-      HomeRoutingModule,
-      PrimeNgModule],
-  templateUrl: './menu-layout.component.html',
-  styleUrl: './menu-layout.component.css'
+    selector: 'app-menu-layout',
+    imports: [CommonModule,
+        HomeRoutingModule,
+        PrimeNgModule],
+    templateUrl: './menu-layout.component.html',
+    styleUrl: './menu-layout.component.css'
 })
 export class MenuLayoutComponent implements OnInit{
   
