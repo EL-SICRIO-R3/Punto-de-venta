@@ -14,23 +14,26 @@
         </div>
         <div class="row div-opciones-pedido p-2">
             <div class="col-8 row" >
-                <div class="col text-center">
-                    <p-button label="Favoritos" icon="pi pi-star" styleClass="btn-opc-menu" />
-                </div>
-                <div class="col text-center">
-                    <p-button label="Desayunos" icon="pi pi-sun" styleClass="btn-opc-menu" />
-                </div>
-                <div class="col text-center">
-                    <p-button label="Profile" icon="pi pi-user" styleClass="btn-opc-menu" />
-                </div>
-                <div class="col text-center">
-                    <p-button label="Profile" icon="pi pi-user"  styleClass="btn-opc-menu"/>
-                </div>
-                <div class="col text-center">
-                    <p-button label="Profile" icon="pi pi-user" styleClass="btn-opc-menu" />
-                </div>
+                @for(item of ocpFiltros; track item.id){
+                    <div class="col text-center">
+                        <p-button label="{{item.title}}" icon="{{item.icon}}" [styleClass]="'btn-opc-menu ' + (item.active ? 'active' : '')"   (click)="onSelectItem(item)"/>
+                    </div>
+                }
+                
             </div>
             
+        </div>
+        <div class="row p-3">
+            @for(item of itemsProduct; track item.id){
+                <div class="card card-item m-3 p-2">
+                    <img src="../../../assets/img/{{item.image}}" class="card-img-top img-item" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{item.nomProduct}}</h5>
+                      <p class="card-text">{{item.description}}</p>
+                      <a class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            }
         </div>
     </div>
     <div class="col-3 pedido"></div>

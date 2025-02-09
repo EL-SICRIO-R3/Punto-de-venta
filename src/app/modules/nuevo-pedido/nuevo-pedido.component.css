@@ -2,6 +2,7 @@
 .menu-items{
     height: 100%;
     background-color: #f5f5f5;
+
 }
 
 .header-pedido{
@@ -27,4 +28,25 @@
 :host ::ng-deep .btn-opc-menu:hover{
     background-color: #ff7102;
     border-color: #ff7102;
+}
+
+:host ::ng-deep .active{
+    background-color: #ff7102;
+    border-color: #ff7102;
+    color: white;
+}
+
+.card-item{
+    width: 18rem;
+    border: none;
+}
+
+.img-item{
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-text{
+    
 }
