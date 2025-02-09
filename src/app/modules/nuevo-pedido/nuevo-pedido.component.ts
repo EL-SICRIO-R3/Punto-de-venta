@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
-import { AgregarPedidoComponent } from './agregar-pedido/agregar-pedido.component';
 
 @Component({
     selector: 'app-nuevo-pedido',

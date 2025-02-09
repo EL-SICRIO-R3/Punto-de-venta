@@ -5,7 +5,10 @@ import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { DialogModule } from 'primeng/dialog';
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
 
+import { ButtonModule } from 'primeng/button';
 
 
 const _PIRME_COMPONENTS = [
@@ -13,7 +16,10 @@ const _PIRME_COMPONENTS = [
   MenuModule,
   BreadcrumbModule,
   PanelMenuModule,
-  DialogModule
+  DialogModule,
+  IconFieldModule,
+  InputIconModule,
+  ButtonModule
 ]
 @NgModule({
   declarations: [],
