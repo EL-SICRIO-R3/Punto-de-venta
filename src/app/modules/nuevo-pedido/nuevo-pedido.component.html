@@ -1,4 +1,4 @@
-<div class="row h-100">
+<div class="row row-general">
     <div class="col-9 menu-items">
         <div class="row header-pedido align-items-center p-3">
             <div class="col-6 ">
@@ -23,7 +23,7 @@
             </div>
             
         </div>
-        <div class="row p-3">
+        <div class="row p-3 row-item-products">
             @for(item of itemsProduct; track item.id){
                 <div class="card card-item m-3 p-2">
                     <img src="../../../assets/img/{{item.image}}" class="card-img-top img-item" alt="...">
