@@ -36,6 +36,14 @@
     color: white;
 }
 
+.btn-carrito{
+    background-color: #ff7102;
+    border-color: #ff7102;
+    color: white;
+    position: relative;
+    right: 0px;
+}
+
 .card-item{
     width: 18rem;
     border: none;
