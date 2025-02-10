@@ -1,0 +1,11 @@
+<div class="h-100 menu d-inline align-items-center text-center">
+    <div class="icon-app row">
+        <img src="../../../assets/imgIcon.jpg" alt="">
+    </div>
+    <div class="row">
+        <div class="align-items-center div-icon-menu col-12"  *ngFor="let item of menuOptions" [ngClass]="{'active': item.active }" (click)="onSelectItem(item)" >
+            <i ngClass="{{item.icon}}" class=" icon-menu"></i>
+        </div>    
+    </div>
+    
+</div>

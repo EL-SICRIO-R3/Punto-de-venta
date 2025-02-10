@@ -1,0 +1,37 @@
+
+@media (max-width: 900px) {
+    .menu {
+      display: none;
+    }
+}
+
+.menu {
+  width: 8rem;
+}
+
+.row-general{
+  position: absolute; 
+  height: 100%; 
+  width: 100%;
+}
+
+
+.row-general {
+  display: flex;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+.menu {
+  width: 8rem; /* Ancho del menú (ajusta según tus necesidades) */
+  position: fixed; /* Fija el menú */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  overflow-y: auto; /* Permite scroll si el menú es muy largo */
+  z-index: 1000; /* Asegura que el menú esté por encima del contenido */
+}
+
+.main {
+  margin-left: 8rem; /* Deja espacio para el menú */
+  flex-grow: 1; /* Ocupa el espacio restante */
+  overflow-y: auto; /* Permite scroll en el contenido */
+}
+

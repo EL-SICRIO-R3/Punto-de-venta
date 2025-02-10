@@ -1,0 +1,25 @@
+.icon-menu{
+    vertical-align: middle;
+}
+
+.div-icon-menu{
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.div-icon-menu:hover {
+    color: #ff7102;
+    border-right: 5px solid;
+    cursor: pointer;
+}
+
+.active{
+    color: #ff7102;
+    border-right: 5px solid;
+}
+
+.menu{
+    
+}

@@ -4,10 +4,12 @@ import { HomeComponent } from '../../modules/home/home.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
     loadChildren: () => import('../../modules/home/home.module').then(m => m.HomeModule)
-  }
+  },
+  { path: '', redirectTo: '/home/pedidos', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home/pedidos' },
 ];
 
 @NgModule({
