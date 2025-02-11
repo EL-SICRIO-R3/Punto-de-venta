@@ -3,7 +3,6 @@
         <div class="row header-pedido align-items-center p-3">
             <div class="col-6 ">
                 <p class="tittle-pedido"><strong>Birrieria ElKompare</strong></p>
-                <p>Punto de ventas del local Birrieria ElKompare</p>
             </div>
             <div class="col-6 ">
                 <p-iconfield>
@@ -31,7 +30,7 @@
                       <h5 class="card-title">{{item.nomProduct}}</h5>
                       <p class="card-text">{{item.description}}</p>
                       <div class="text-end">
-                        <a class="btn btn-primary btn-carrito">
+                        <a class="btn btn-primary btn-carrito" (click)="onAddProduct(item)">
                             <i class="bi bi-cart"></i>
                         </a>
                       </div>
@@ -41,5 +40,40 @@
             }
         </div>
     </div>
-    <div class="col-3 pedido"></div>
+    <div class="col-3 pedido">
+        <div class="row row-title-orden mt-5">
+            <p class="tittle-orden"><strong>Orden Actual</strong></p>
+        </div>
+        <div class="rows-item-orden">
+            @for(item of ordenActual.orderProduct; track item.products.id; let i = $index){
+                <div class="row">
+                    <div class="col-3">
+                        <div class="div-img-orden mt-2 mb-2">
+                            <img src="../../../assets/img/{{item.products.image}}" class="img-orden" alt="...">
+                        </div>
+                        
+                    </div>
+                    <div class="col-9 row">
+                        <div class="col-12 mt-2">
+                            <p class="p-name-orden"><strong>{{item.products.nomProduct}} </strong></p>
+                        </div>
+                        <div class="col-12 row align-items-end pb-2" >
+                            <div class="col-3 " >
+                                ${{item.products.price * item.amount }} 
+                            </div>
+                            <div class="col-10 row justify-content-end" >
+                                <i class=" col-2 btn-plus" (click)="onDeleteProduct(item.products)">-</i>
+                                <div class="col-2">
+                                    {{item.amount}} 
+                                </div>
+                                <i class="bi bi-plus col-2 btn-plus" (click)="onAddProduct(item.products)"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        
+        
+    </div>
 </div>

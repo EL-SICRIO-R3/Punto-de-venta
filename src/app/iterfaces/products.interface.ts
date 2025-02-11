@@ -7,13 +7,16 @@ export interface IProduct {
     category: number;
 }
 
-export interface IListProduct {
-    product: IProduct;
+export interface IOrderProduct {
+    products: IProduct;
     amount: number;
-    table: number;
-    total: number;
 }
 
+export interface IOrder{
+    orderProduct: IOrderProduct[];
+    total: number;
+    table: number;
+}
 export interface IOpcFiltroPedido {
     id: number
     title: string;

@@ -7,7 +7,9 @@
 
 @import "_custom.scss";
 
-
+body{
+  font-family: 'Roboto', sans-serif;
+}
 @layer tailwind-base, primeng, tailwind-utilities;
 
 @layer tailwind-base {

@@ -65,3 +65,44 @@
     height:  80vh;
     overflow: auto;
 }
+
+.tittle-orden{
+    font-size: 30px;
+}
+
+.div-img-orden{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 10px;
+}
+
+.img-orden{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.rows-item-orden{
+    width: 100%;
+}
+
+.btn-plus{
+    text-align: center;
+    background-color: #ff7102;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: white;
+}
+
+.btn-plus:hover {
+    color: #ff7102;
+    background-color: white;
+    border: 1px solid;
+    border-color: #ff7102;
+}
+
+.p-name-orden{
+    font-size: 20px;
+}
