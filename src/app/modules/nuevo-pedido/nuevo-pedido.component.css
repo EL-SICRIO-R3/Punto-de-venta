@@ -27,11 +27,13 @@
     color: black;
     background-color: white;
     border-color: #ff7102;
+    border: none;
 }
 
 :host ::ng-deep .btn-opc-menu:hover{
     background-color: #ff7102;
     border-color: #ff7102;
+    border: none;
 }
 
 :host ::ng-deep .active{
