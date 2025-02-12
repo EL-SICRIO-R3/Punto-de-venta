@@ -1,10 +1,10 @@
 <div class="row row-general">
-    <div class="col-9 menu-items">
+    <div class="col-md-9 col-sm-12  menu-items">
         <div class="row header-pedido align-items-center p-3">
-            <div class="col-6 ">
+            <div class="col-md-6 col-sm-12 ">
                 <p class="tittle-pedido"><strong>Punto de venta</strong></p>
             </div>
-            <div class="col-6 ">
+            <div class="col-md-6 col-sm-12  ">
                 <p-iconfield>
                     <input type="text" pInputText placeholder="Search" class="form-control" />
                     <p-inputicon styleClass="pi pi-search" />
@@ -12,35 +12,34 @@
             </div>
         </div>
         <div class="row div-opciones-pedido p-2">
-            <div class="col-8 row" >
+            <div class="col-md-8 col-sm-12  row" >
                 @for(item of ocpFiltros; track item.id){
-                    <div class="col text-center mt-2">
+                    <div class="col-md-4 col-sm-12  text-center mt-2">
                         <p-button label="{{item.title}}" icon="{{item.icon}}" [styleClass]="'btn-opc-menu ' + (item.active ? 'active' : '')"   (click)="onSelectItem(item)"/>
                     </div>
                 }
-                
             </div>
             
         </div>
-        <div class="row p-3 row-item-products">
+        <div class="row p-3 text-center row-item-products justify-content-center">
             @for(item of itemsProduct; track item.id){
-                <div class="card card-item m-3 p-2">
-                    <img src="../../../assets/img/{{item.image}}" class="card-img-top img-item" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">{{item.nomProduct}}</h5>
-                      <p class="card-text">{{item.description}}</p>
-                      <div class="text-end">
+            <div class="card card-item m-3 p-2" >
+                <img src="../../../assets/img/{{item.image}}" class="card-img-top img-item" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.nomProduct}}</h5>
+                    <p class="card-text">{{item.description}}</p>
+                    <div class="text-end">
                         <a class="btn btn-primary btn-carrito" (click)="onAddProduct(item)">
                             <i class="bi bi-cart"></i>
                         </a>
-                      </div>
-                      
                     </div>
+        
                 </div>
+            </div>
             }
         </div>
     </div>
-    <div class="col-3 pedido">
+    <div class="col-md-3  pedido">
         <div class="row row-title-orden mt-5">
             <p class="tittle-orden"><strong>Orden Actual</strong></p>
         </div>
