@@ -76,33 +76,54 @@
     border-radius: 10px;
 }
 
-.img-orden{
-    width: 5rem;
-    height: 5rem;
+.img-order{
+    height: 100%;
     object-fit: cover;
-    border-radius: 10px;
 }
 
 .rows-item-orden{
     width: 100%;
+    height: 70%;
 }
 
-.btn-plus{
-    text-align: center;
+.div-card-order{
+    width: 400px;
+    height: 100px;
+}
+
+.div-img-order{
+    max-height: 100px;
+}
+
+
+.btn-amount{
     background-color: #ff7102;
+    width: 25px;
+    height: 25px;
+    text-align: center;
     border-radius: 5px;
-    cursor: pointer;
-    border: 1px solid;
-    border-color: white;
+    font-size: 16px;
 }
 
-.btn-plus:hover {
-    color: #ff7102;
+.btn-amount:hover{
     background-color: white;
-    border: 1px solid;
-    border-color: #ff7102;
+    color: #ff7102;
+    cursor: pointer;
 }
 
-.p-name-orden{
-    font-size: 20px;
+.div-amount{
+    width: 25px;
+    text-align: center;
+}
+
+.div-order-null{
+    position: relative;
+    top: 20%;
+    font-size: 25px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.i-orden-null{
+    font-size: 40px;
 }

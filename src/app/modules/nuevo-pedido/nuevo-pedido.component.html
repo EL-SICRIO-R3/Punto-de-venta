@@ -14,7 +14,7 @@
         <div class="row div-opciones-pedido p-2">
             <div class="col-8 row" >
                 @for(item of ocpFiltros; track item.id){
-                    <div class="col text-center">
+                    <div class="col text-center mt-2">
                         <p-button label="{{item.title}}" icon="{{item.icon}}" [styleClass]="'btn-opc-menu ' + (item.active ? 'active' : '')"   (click)="onSelectItem(item)"/>
                     </div>
                 }
@@ -44,33 +44,37 @@
         <div class="row row-title-orden mt-5">
             <p class="tittle-orden"><strong>Orden Actual</strong></p>
         </div>
-        <div class="rows-item-orden">
+        <div class="rows-item-orden  overflow-auto">
             @for(item of ordenActual.orderProduct; track item.products.id; let i = $index){
-                <div class="row">
-                    <div class="col-3">
-                        <div class="div-img-orden mt-2 mb-2">
-                            <img src="../../../assets/img/{{item.products.image}}" class="img-orden" alt="...">
+                <div class="card mb-3 border-0 " >
+                    <div class="row g-0 div-card-order ">
+                        <div class="col-md-3 div-img-order" >
+                            <img src="../../../assets/img/{{item.products.image}}" class="img-fluid rounded-start rounded img-order" >
                         </div>
-                        
-                    </div>
-                    <div class="col-9 row">
-                        <div class="col-12 mt-2">
-                            <p class="p-name-orden"><strong>{{item.products.nomProduct}} </strong></p>
-                        </div>
-                        <div class="col-12 row align-items-end pb-2" >
-                            <div class="col-3 " >
-                                ${{item.products.price * item.amount }} 
-                            </div>
-                            <div class="col-10 row justify-content-end" >
-                                <i class=" col-2 btn-plus" (click)="onDeleteProduct(item.products)">-</i>
-                                <div class="col-2">
-                                    {{item.amount}} 
+                        <div class="col-md-8 div-body-order">
+                            <div class="card-body div-card-body">
+                                <h5 class="card-title">{{item.products.nomProduct}}</h5>
+                                <div class="card-text div-card-text">
+                                    <div class="d-inline-block w-50">
+                                        ${{item.products.price * item.amount }} 
+                                    </div>
+                                    <div class="d-inline-block w-50 text-end">
+                                        <div class="d-inline-block btn-amount" (click)="onDeleteProduct(item.products)">-</div>
+                                        <div class="d-inline-block div-amount">{{item.amount}}</div>
+                                        <div class="d-inline-block bi bi-plus btn-amount" (click)="onAddProduct(item.products)"></div>
+                                    </div>
                                 </div>
-                                <i class="bi bi-plus col-2 btn-plus" (click)="onAddProduct(item.products)"></i>
                             </div>
                         </div>
                     </div>
                 </div>
+            }
+            @if(ordenActual.orderProduct.length == 0){
+                <div class="div-order-null">
+                    <i class="bi bi-exclamation-circle-fill i-orden-null"></i>
+                    <p>No hay productos seleccionados</p>
+                </div>
+                
             }
         </div>
         
