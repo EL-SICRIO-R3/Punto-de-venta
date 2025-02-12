@@ -127,3 +127,16 @@
 .i-orden-null{
     font-size: 40px;
 }
+
+.btn-guardar-order{
+    text-align: center;
+    display: block;
+    justify-items: end;
+    margin-top: 5px;
+    
+}
+
+.btn-pedido{
+    width: 80%;
+    min-width: 100px
+}
