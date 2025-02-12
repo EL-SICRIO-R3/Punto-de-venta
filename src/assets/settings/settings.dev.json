@@ -1,0 +1,8 @@
+{
+  "haveMenu": true,
+  "appLogo": "assets/img/app-logo.png",
+  "footerTitle": "Arquitectura de Desarrollo - Desarrollo",
+  "webApiBaseUrl": "http://localhost:3200",
+  "apiMenu": "http://localhost:8080/api/v1/menu",
+  "login": "/login"
+}
