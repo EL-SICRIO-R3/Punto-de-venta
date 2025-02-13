@@ -29,6 +29,9 @@ export class NuevoPedidoComponent implements OnInit {
   }
 
   onSelectItem(item: IOpcFiltroPedido) {
+    this.ocpFiltros.forEach(item => {
+      item.active = false;
+    })
     this.ocpFiltros.filter(x => x.id === item.id)[0].active = !item.active;
   }
 

@@ -1,5 +1,5 @@
 <div class="row row-general">
-    <div class="col-md-9 col-sm-12  menu-items">
+    <div class="col-md-9 col-sm-12  menu-items ">
         <div class="row header-pedido align-items-center p-3">
             <div class="col-md-6 col-sm-12 ">
                 <p class="tittle-pedido"><strong>Punto de venta</strong></p>
@@ -15,7 +15,7 @@
             <div class="col-md-8 col-sm-12  row" >
                 @for(item of ocpFiltros; track item.id){
                     <div class="col-md-4 col-sm-12  text-center mt-2">
-                        <p-button label="{{item.title}}" icon="{{item.icon}}" [styleClass]="'btn-opc-menu ' + (item.active ? 'active' : '')"   (click)="onSelectItem(item)"/>
+                        <p-button label="{{item.title}}" icon="{{item.icon}}" [styleClass]="'btn-opc-menu'"   (click)="onSelectItem(item)"/>
                     </div>
                 }
             </div>
@@ -39,29 +39,28 @@
             }
         </div>
     </div>
-    <div class="col-md-3  pedido">
+    <!-- LOGICA DE LA SECCION DE ORDEN -->
+    <div class="pedido" >
         <div class="row row-title-orden mt-5">
             <p class="tittle-orden"><strong>Orden Actual</strong></p>
         </div>
-        <div class="rows-item-orden  overflow-auto">
+        <div class="rows-item-orden  overflow-auto" >
             @for(item of ordenActual.orderProduct; track item.products.id; let i = $index){
-                <div class="card mb-3 border-0 " >
-                    <div class="row g-0 div-card-order ">
-                        <div class="col-md-3 div-img-order" >
+                <div class="mt-3 h-auto" >
+                    <div class="row g-0 div-card-order h-auto" >
+                        <div class="d-inline-block div-img-order" >
                             <img src="../../../assets/img/{{item.products.image}}" class="img-fluid rounded-start rounded img-order" >
                         </div>
-                        <div class="col-md-8 div-body-order">
-                            <div class="card-body div-card-body">
-                                <h5 class="card-title">{{item.products.nomProduct}}</h5>
-                                <div class="card-text div-card-text">
-                                    <div class="d-inline-block w-50">
-                                        ${{item.products.price * item.amount }} 
-                                    </div>
-                                    <div class="d-inline-block w-50 text-end">
-                                        <div class="d-inline-block btn-amount" (click)="onDeleteProduct(item.products)">-</div>
-                                        <div class="d-inline-block div-amount">{{item.amount}}</div>
-                                        <div class="d-inline-block bi bi-plus btn-amount" (click)="onAddProduct(item.products)"></div>
-                                    </div>
+                        <div class="d-inline-block col-md-7 col-sm-12 div-title-po" >
+                            <h5 class="">{{item.products.nomProduct}}</h5>
+                            <div class="h-50 align-items-end" >
+                                <div class="d-inline-block w-50" >
+                                    ${{item.products.price * item.amount }} 
+                                </div>
+                                <div class="d-block w-100  text-end" >
+                                    <div class="d-inline-block btn-amount" (click)="onDeleteProduct(item.products)">-</div>
+                                    <div class="d-inline-block div-amount">{{item.amount}}</div>
+                                    <div class="d-inline-block bi bi-plus btn-amount" (click)="onAddProduct(item.products)"></div>
                                 </div>
                             </div>
                         </div>

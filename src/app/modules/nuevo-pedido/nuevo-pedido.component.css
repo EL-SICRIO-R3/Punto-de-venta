@@ -33,6 +33,7 @@
 :host ::ng-deep .btn-opc-menu:hover{
     background-color: #ff7102;
     border-color: #ff7102;
+    color: black;
     border: none;
 }
 
@@ -87,12 +88,15 @@
 }
 
 .div-card-order{
-    width: 400px;
+    
     height: 100px;
 }
 
 .div-img-order{
-    max-height: 100px;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    object-fit: cover;
 }
 
 
@@ -105,10 +109,9 @@
     font-size: 16px;
 }
 
-.btn-amount:hover{
+.btn-amount:active{
     background-color: white;
     color: #ff7102;
-    cursor: pointer;
 }
 
 .div-amount{
@@ -140,3 +143,16 @@
     width: 80%;
     min-width: 100px
 }
+
+.pedido{
+    width: 20vw;
+    display: inline-block;
+}
+
+.div-title-po{
+}
+
+
+
+
+

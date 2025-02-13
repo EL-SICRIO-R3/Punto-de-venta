@@ -29,3 +29,22 @@
   overflow-y: auto; /* Permite scroll en el contenido */
 }
 
+.btn-menu{
+  position: absolute;
+  overflow-y: auto;
+  right: 0px;
+}
+
+/* Estilos para tablets (ancho mínimo de 768px) */
+@media (max-width: 500px) {
+    .menu{
+      display: none;
+    }
+
+    .main{
+      margin-left: 0px;
+      width: 100vw;
+    }
+}
+
+
